@@ -1,6 +1,17 @@
 # nahid.exe — personal page
 
-One static page (`index.html`) + one photo (`assets/nahid.jpg`). No build step, no dependencies.
+One static page (`index.html`) + one photo in two sizes (`assets/nahid.jpg`, `assets/nahid-small.jpg`). No build step, no dependencies. Hand-written HTML/CSS/JS, built with DeepSeek V4.1 Flash + OpenCode.
+
+## Current project data (verified 2026-11-23)
+
+| Project | Version | APK size | Min Android | Live |
+| --- | --- | --- | --- | --- |
+| KanaPet | v1.27 | 49.9 MB | 11+ | https://nahidsarker771.github.io/kana-pet/ |
+| RecallFlow | v2.5 | 13.7 MB | 8+ | https://nahidsarker771.github.io/recall-flow/ |
+| Download Chan | v2.1.1 | 109 MB | 11+ | https://nahidsarker771.github.io/download-chan/ |
+| Life Quest | v1.1 | 682 KB | 9+ | https://nahidsarker771.github.io/life-quest/ |
+
+All four APK buttons point at `releases/latest/download/...` and were checked live.
 
 ## Live
 
@@ -11,6 +22,12 @@ One static page (`index.html`) + one photo (`assets/nahid.jpg`). No build step, 
 | Repository | https://github.com/nahidsarker771/nahid-site |
 
 Every deploy target serves this exact repo, so there is only one copy to maintain.
+
+## SEO files
+
+- `robots.txt` allows all crawlers and points at the sitemap.
+- `sitemap.xml` lists the single page URL.
+- Canonical, Open Graph, Twitter Card and Person JSON-LD tags are in `index.html`.
 
 ## One-click deploys (need your login on that service)
 

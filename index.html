@@ -6,13 +6,20 @@
 <title>Nahid — vibe coder &amp; app gremlin</title>
 <meta name="description" content="Nahid: student, vibe coder, builder of four free apps — KanaPet, RecallFlow, Download Chan and Life Quest. No ads, no signup, direct APK downloads.">
 <link rel="canonical" href="https://nahidsarker771.github.io/nahid-site/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
 <meta name="theme-color" content="#f7f2e7">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nahidsarker771.github.io/nahid-site/">
 <meta property="og:title" content="Nahid — vibe coder &amp; app gremlin">
 <meta property="og:description" content="Four free apps built by vibing. No ads, no signup, no servers. Direct APK links inside.">
-<meta property="og:image" content="assets/nahid.jpg">
+<meta property="og:image" content="https://nahidsarker771.github.io/nahid-site/assets/nahid.jpg">
+<meta property="og:image:width" content="678">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Nahid on a campus lawn in front of a brick university building.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nahid — vibe coder &amp; app gremlin">
+<meta name="twitter:description" content="Four free apps built by vibing. No ads, no signup, no servers. Direct APK links inside.">
+<meta name="twitter:image" content="https://nahidsarker771.github.io/nahid-site/assets/nahid.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c9f94f'/%3E%3Ctext x='50' y='72' font-size='64' text-anchor='middle'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +30,7 @@
   "@type": "Person",
   "name": "Nahid",
   "jobTitle": "Student and vibe coder",
-  "url": "https://nahidsarker771.github.io/",
+  "url": "https://nahidsarker771.github.io/nahid-site/",
   "sameAs": ["https://github.com/nahidsarker771"]
 }
 </script>
@@ -134,7 +141,6 @@
   }
   .s1{top:2px;left:-14px;background:var(--pink);transform:rotate(-7deg)}
   .s2{top:38%;right:-16px;background:var(--sky);transform:rotate(6deg)}
-  .s3{bottom:8%;left:-18px;background:var(--paper);transform:rotate(-3deg)}
 
   /* ---------- buttons ---------- */
   .btn{
@@ -260,6 +266,23 @@
   .step h3{font-size:1.02rem}
   .step p{font-size:.85rem;color:#3a3444}
 
+  /* ---------- tip jar ---------- */
+  .support{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(22px,4vw,42px);align-items:center;
+    background:var(--paper);border:3px solid var(--ink);border-radius:24px;
+    padding:clamp(22px,4vw,34px);box-shadow:10px 10px 0 var(--ink);
+  }
+  .support .kicker{margin-bottom:14px}
+  .support-copy{color:#2c2733;margin-top:14px;max-width:48ch}
+  .tip-box{
+    display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+    background:var(--lime);border:2.5px dashed var(--ink);border-radius:18px;
+    padding:20px;box-shadow:5px 5px 0 var(--ink);
+  }
+  .tip-label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em}
+  .tip-number{font-family:var(--mono);font-size:clamp(1.45rem,3vw,1.9rem);letter-spacing:.04em;line-height:1.1}
+  .tip-note{font-family:var(--mono);font-size:.68rem;opacity:.75}
+
   /* ---------- footer / hosting ---------- */
   .host{
     display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
@@ -286,6 +309,7 @@
     .hero-copy{max-width:60ch}
     .grid{grid-template-columns:1fr}
     .lore-grid{grid-template-columns:1fr}
+    .support{grid-template-columns:1fr}
     .steps{grid-template-columns:repeat(2,1fr)}
     .step:nth-child(even){transform:none}
     .stats{grid-template-columns:repeat(2,1fr)}
@@ -300,7 +324,6 @@
     .brand{font-size:.94rem}
     .s1{left:-6px;top:8px;font-size:.6rem}
     .s2{right:-6px;font-size:.6rem}
-    .s3{display:none}
     .photo-card{transform:rotate(1.2deg);box-shadow:8px 8px 0 var(--ink)}
     .hero-photo{padding-inline:6px}
     .stats{grid-template-columns:1fr 1fr;box-shadow:5px 5px 0 var(--ink)}
@@ -310,6 +333,7 @@
     .card{padding:18px;box-shadow:6px 6px 0 var(--ink)}
     .card:hover{transform:none;box-shadow:6px 6px 0 var(--ink)}
     .host{box-shadow:6px 6px 0 var(--ink)}
+    .support{box-shadow:6px 6px 0 var(--ink)}
     .receipts{transform:none;box-shadow:7px 7px 0 var(--lime)}
     .hl{box-shadow:3px 3px 0 var(--ink)}
   }
@@ -327,6 +351,7 @@
     <a href="#projects">projects</a>
     <a href="#lore">lore</a>
     <a href="#vibe">how i vibe</a>
+    <a href="#support">tip jar</a>
   </nav>
   <a class="gh" href="https://github.com/nahidsarker771" target="_blank" rel="noopener">github ↗</a>
 </header>
@@ -351,7 +376,7 @@
     <div class="hero-photo">
       <span class="tape" aria-hidden="true"></span>
       <figure class="photo-card" id="photoCard">
-        <img src="assets/nahid.jpg" width="678" height="900" alt="Nahid standing on a campus lawn in front of a brick university building, arms crossed." fetchpriority="high">
+        <img src="assets/nahid.jpg" srcset="assets/nahid-small.jpg 316w, assets/nahid.jpg 678w" sizes="(max-width: 900px) 340px, 470px" width="678" height="900" alt="Nahid standing on a campus lawn in front of a brick university building, arms crossed." fetchpriority="high">
         <figcaption>
           <span id="caption">certified human, allegedly</span>
           <button class="tap" id="tapBtn" type="button" aria-pressed="false">tap me</button>
@@ -359,17 +384,16 @@
       </figure>
       <span class="sticker s1">100% vibe-coded</span>
       <span class="sticker s2">no ads ever</span>
-      <span class="sticker s3">ships at 2am</span>
     </div>
   </section>
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
       <div class="marquee-group">
-        <span>vibe coding</span><span>✦</span><span>freebuff</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
+        <span>vibe coding</span><span>✦</span><span>deepseek v4.1 flash</span><span>✦</span><span>opencode</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
       </div>
       <div class="marquee-group">
-        <span>vibe coding</span><span>✦</span><span>freebuff</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
+        <span>vibe coding</span><span>✦</span><span>deepseek v4.1 flash</span><span>✦</span><span>opencode</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
       </div>
     </div>
   </div>
@@ -421,7 +445,7 @@
         </div>
         <p class="card-copy">spaced repetition that lives entirely on your phone. it literally has no internet permission — so even if it wanted to snitch on your study habits, it can’t.</p>
         <ul class="specs">
-          <li>13.7 MB</li><li>android 8+</li><li>fully offline</li><li>no permissions</li>
+          <li>13.7 MB</li><li>android 8+</li><li>fully offline</li><li>no internet permission</li>
         </ul>
         <div class="card-links">
           <a class="btn btn-ink btn-sm" href="https://github.com/nahidsarker771/recall-flow/releases/latest/download/RecallFlow.apk">APK ⤓</a>
@@ -480,9 +504,9 @@
       <div>
         <span class="kicker">the lore, abridged</span>
         <h2>i am not a startup.<br>i’m a guy with wifi.</h2>
-        <p>it starts at 2am with a normal idea. then i describe it badly to <q>Freebuff</q>, it says “sure, why not”, and eight hours later something installs on your phone.</p>
-        <p>no framework, no meetings, no roadmap, no investors. just vanilla JavaScript, a healthy relationship with the browser console, and the belief that free software should feel nice to use.</p>
-        <p>every app here is free, has no ads, no accounts and no analytics. i can’t even see you reading this page. that’s the whole business model.</p>
+        <p>it starts with a normal idea. then i describe it badly to <q>DeepSeek V4.1 Flash</q> inside <q>OpenCode</q>, it says “sure, why not”, and a few hours later something installs on your phone.</p>
+        <p>no ui framework, no meetings, no roadmap, no investors. just vanilla JavaScript, a healthy relationship with the browser console, and the belief that free software should feel nice to use.</p>
+        <p>every app here is free, has no ads, no accounts and no analytics. i can’t even see you reading this page. that’s the whole business model — plus an optional tip jar.</p>
       </div>
       <aside class="receipts" aria-label="The fine print">
         <h3>the fine print <span>✓ paid: nothing</span></h3>
@@ -492,7 +516,7 @@
           <li><span>data collected</span><span>0 bytes</span></li>
           <li><span>api keys in repos</span><span>0</span></li>
           <li><span>servers running</span><span>0</span></li>
-          <li><span>frameworks used</span><span>0</span></li>
+          <li><span>ui frameworks used</span><span>0</span></li>
           <li class="total"><span>apps you can just have</span><span>4 / 4</span></li>
         </ul>
       </aside>
@@ -503,17 +527,17 @@
     <div class="section-head">
       <span class="kicker">the process</span>
       <h2>how i vibe (patent pending)</h2>
-      <p>people ask how the apps get made. they assume a team. it’s one person, one AI, and a suspicious amount of orange juice.</p>
+      <p>people ask how the apps get made. they assume a team. it’s one person, one AI, one terminal and a suspicious amount of orange juice.</p>
     </div>
     <ol class="steps">
       <li class="step reveal">
         <b>01</b>
-        <h3>have a normal idea at 2am</h3>
-        <p>“what if studying japanese felt like feeding a pet?” sounds normal at 2am. it is not.</p>
+        <h3>have a normal idea</h3>
+        <p>“what if studying japanese felt like feeding a pet?” sounds normal in my head. it is not.</p>
       </li>
       <li class="step reveal">
         <b>02</b>
-        <h3>explain it badly to freebuff</h3>
+        <h3>explain it badly to opencode</h3>
         <p>half sentence, three typos, one reference to a meme. somehow it understands.</p>
       </li>
       <li class="step reveal">
@@ -529,10 +553,26 @@
     </ol>
   </section>
 
+  <section id="support" class="wrap" style="padding-top:0">
+    <div class="support">
+      <div>
+        <span class="kicker">optional tip jar</span>
+        <h2>buy me a coffee?</h2>
+        <p class="support-copy">everything here stays free — no ads, no accounts, no paywalls. if an app saved you some time, a small tip is appreciated but never expected.</p>
+      </div>
+      <div class="tip-box">
+        <span class="tip-label">bKash personal number</span>
+        <strong class="tip-number" id="bkashNumber">01642428844</strong>
+        <button class="btn btn-ink btn-sm" id="copyBkash" type="button">copy number</button>
+        <p class="tip-note">send money · any amount · tips are optional</p>
+      </div>
+    </div>
+  </section>
+
   <section class="wrap" style="padding-top:0">
     <div class="host">
       <div>
-        <h2>this whole site is one html file and one jpg.</h2>
+        <h2>this whole site is one html file and one photo.</h2>
         <p>no build step · no database · no monthly bill · hosted free on github pages</p>
       </div>
       <a class="btn btn-ink" href="https://github.com/nahidsarker771" target="_blank" rel="noopener">steal the idea ↗</a>
@@ -549,13 +589,58 @@
       <a href="https://nahidsarker771.github.io/recall-flow/" target="_blank" rel="noopener">recall-flow</a>
       <a href="https://nahidsarker771.github.io/download-chan/" target="_blank" rel="noopener">download-chan</a>
       <a href="https://nahidsarker771.github.io/life-quest/" target="_blank" rel="noopener">life-quest</a>
+      <a href="#support">tip jar</a>
     </div>
   </div>
-  <p class="fineprint">© <span id="yr">2026</span> Nahid. vibe-coded with Freebuff, vanilla CSS and an amount of caffeine i won’t disclose. everything here is free — if you paid for it, you got scammed.</p>
+  <p class="fineprint">© <span id="yr">2026</span> Nahid. vibe-coded with DeepSeek V4.1 Flash + OpenCode, vanilla CSS and an amount of caffeine i won’t disclose. the apps are free — tips are optional, never required. if you paid for an app, you got scammed.</p>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // copy the bKash number
+  var bkash = '01642428844';
+  var copyBtn = document.getElementById('copyBkash');
+  function copied() {
+    copyBtn.textContent = 'copied';
+    setTimeout(function () { copyBtn.textContent = 'copy number'; }, 1800);
+  }
+  function selectNumber() {
+    var num = document.getElementById('bkashNumber');
+    if (num && window.getSelection) {
+      var range = document.createRange();
+      range.selectNodeContents(num);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    copyBtn.textContent = 'select + copy';
+  }
+  function fallbackCopy() {
+    var t = document.createElement('textarea');
+    t.value = bkash;
+    t.setAttribute('readonly', '');
+    t.style.position = 'fixed';
+    t.style.opacity = '0';
+    document.body.appendChild(t);
+    t.select();
+    try {
+      if (document.execCommand('copy')) {
+        document.body.removeChild(t);
+        copied();
+        return;
+      }
+    } catch (e) {}
+    document.body.removeChild(t);
+    selectNumber();
+  }
+  copyBtn.addEventListener('click', function () {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(bkash).then(copied).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+  });
 
   // photo easter egg
   var card = document.getElementById('photoCard');
