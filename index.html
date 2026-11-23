@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nahid — vibe coder &amp; app gremlin</title>
+<meta name="description" content="Nahid: student, vibe coder, builder of four free apps — KanaPet, RecallFlow, Download Chan and Life Quest. No ads, no signup, direct APK downloads.">
+<link rel="canonical" href="https://nahidsarker771.github.io/">
+<meta name="theme-color" content="#f7f2e7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nahid — vibe coder &amp; app gremlin">
+<meta property="og:description" content="Four free apps built by vibing. No ads, no signup, no servers. Direct APK links inside.">
+<meta property="og:image" content="assets/nahid.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c9f94f'/%3E%3Ctext x='50' y='72' font-size='64' text-anchor='middle'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nahid",
+  "jobTitle": "Student and vibe coder",
+  "url": "https://nahidsarker771.github.io/",
+  "sameAs": ["https://github.com/nahidsarker771"]
+}
+</script>
+<style>
+  :root{
+    --ink:#0d0b12;
+    --cream:#f7f2e7;
+    --paper:#fffdf6;
+    --lime:#c9f94f;
+    --pink:#ff7ab8;
+    --orange:#ffb03a;
+    --sky:#8fd3ff;
+    --violet:#b79bff;
+    --mono:"Space Mono", ui-monospace, monospace;
+    --sans:"Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--cream);
+    background-image:radial-gradient(rgba(13,11,18,.16) 1.2px, transparent 1.2px);
+    background-size:22px 22px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  ::selection{background:var(--lime);color:var(--ink)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--cream);padding:.7rem 1rem;border-radius:0 0 12px 0;z-index:100}
+  .skip:focus{left:0}
+  .wrap{width:min(1120px, 100% - 2.5rem);margin-inline:auto}
+  section{padding-block:clamp(56px, 8vw, 96px)}
+  h1,h2,h3{line-height:1.02;letter-spacing:-.035em;margin:0;font-weight:800}
+  h2{font-size:clamp(2rem, 4.6vw, 3.2rem)}
+  p{margin:0}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:12px;z-index:50;
+    width:min(1120px, 100% - 2.5rem);margin:16px auto 0;
+    display:flex;align-items:center;gap:14px;
+    padding:10px 14px;
+    background:var(--paper);
+    border:2.5px solid var(--ink);
+    border-radius:999px;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:1.02rem}
+  .brand-dot{width:12px;height:12px;border-radius:50%;background:var(--lime);border:2px solid var(--ink);flex:none}
+  .brand-ext{font-family:var(--mono);font-size:.72rem;font-weight:400;opacity:.55}
+  .topbar nav{display:flex;gap:18px;margin-left:auto;font-family:var(--mono);font-size:.78rem}
+  .topbar nav a{text-decoration:none;border-bottom:2px solid transparent}
+  .topbar nav a:hover{border-color:var(--ink)}
+  .gh{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-family:var(--mono);font-size:.78rem;background:var(--ink);color:var(--cream);padding:8px 14px;border-radius:999px;white-space:nowrap}
+
+  /* ---------- hero ---------- */
+  .hero{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(40px,6vw,64px)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--mono);font-size:.74rem;text-transform:lowercase;
+    border:2px solid var(--ink);background:var(--paper);
+    padding:7px 13px;border-radius:999px;margin-bottom:22px;
+  }
+  .dot-live{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.22);flex:none;animation:pulse 2s infinite}
+  @keyframes pulse{50%{box-shadow:0 0 0 6px rgba(34,197,94,0)}}
+  h1{font-size:clamp(2.6rem, 7vw, 4.9rem);letter-spacing:-.05em}
+  .hl{display:inline-block;padding:.02em .16em .06em;border:2.5px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink)}
+  .hl-lime{background:var(--lime);transform:rotate(-1.6deg)}
+  .hl-pink{background:var(--pink);transform:rotate(1.2deg)}
+  .lede{margin-top:26px;font-size:clamp(1rem, 1.5vw, 1.12rem);max-width:46ch;color:#2c2733}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .hero-tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:26px 0 0;font-family:var(--mono);font-size:.72rem}
+  .hero-tags li{border:1.8px solid var(--ink);border-radius:999px;padding:4px 10px;background:rgba(255,255,255,.65)}
+
+  .hero-photo{position:relative;padding:14px 12px 22px}
+  .photo-card{
+    position:relative;margin:0;
+    border:3px solid var(--ink);border-radius:22px;overflow:hidden;
+    background:var(--paper);
+    box-shadow:12px 12px 0 var(--ink);
+    transform:rotate(2deg);
+    transition:transform .3s ease;
+  }
+  .photo-card.wink{transform:rotate(-1.4deg) translateY(-4px)}
+  .photo-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 24%}
+  .photo-card figcaption{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    border-top:3px solid var(--ink);padding:10px 14px;
+    font-family:var(--mono);font-size:.7rem;background:var(--lime);
+  }
+  .tap{font-size:.62rem;border:1.5px solid var(--ink);border-radius:999px;padding:2px 8px;background:var(--paper);white-space:nowrap}
+  .tape{
+    position:absolute;top:0;left:50%;width:108px;height:26px;
+    background:rgba(255,255,255,.55);
+    border:1.5px solid rgba(13,11,18,.28);
+    transform:translate(-50%,-40%) rotate(-4deg);
+    z-index:3;
+  }
+  .sticker{
+    position:absolute;z-index:4;
+    font-family:var(--mono);font-size:.68rem;font-weight:700;
+    padding:7px 12px;border:2.2px solid var(--ink);border-radius:999px;
+    box-shadow:3px 3px 0 var(--ink);white-space:nowrap;
+  }
+  .s1{top:2px;left:-14px;background:var(--pink);transform:rotate(-7deg)}
+  .s2{top:38%;right:-16px;background:var(--sky);transform:rotate(6deg)}
+  .s3{bottom:8%;left:-18px;background:var(--paper);transform:rotate(-3deg)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.85rem 1.2rem;border:2.5px solid var(--ink);border-radius:999px;
+    font-family:var(--sans);font-weight:700;font-size:.95rem;text-decoration:none;
+    background:var(--paper);color:var(--ink);
+    box-shadow:4px 4px 0 var(--ink);
+    transition:transform .14s ease, box-shadow .14s ease;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+  .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .btn:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+  .btn-ink{background:var(--ink);color:var(--cream)}
+  .btn-lime{background:var(--lime)}
+  .btn-sm{padding:.58rem .9rem;font-size:.8rem;box-shadow:3px 3px 0 var(--ink)}
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    margin-top:clamp(40px,6vw,64px);
+    border-block:3px solid var(--ink);background:var(--lime);
+    padding:11px 0;overflow:hidden;
+  }
+  .marquee--alt{background:var(--pink);transform:rotate(-.7deg) scale(1.02);border-top:none}
+  .marquee-track{display:flex;width:max-content;animation:slide 34s linear infinite}
+  .marquee--alt .marquee-track{animation-direction:reverse;animation-duration:40s}
+  .marquee-group{display:flex;gap:26px;padding-right:26px;font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){
+    .marquee-track{animation:none}
+    .dot-live{animation:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- stats ---------- */
+  .stats{
+    list-style:none;margin:clamp(44px,6vw,68px) 0 0;padding:0;
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:3px solid var(--ink);border-radius:20px;overflow:hidden;
+    background:var(--paper);box-shadow:8px 8px 0 var(--ink);
+  }
+  .stats li{padding:18px 16px;border-right:2.5px solid var(--ink)}
+  .stats li:last-child{border-right:none}
+  .stats b{display:block;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.04em;line-height:1.1}
+  .stats span{font-family:var(--mono);font-size:.7rem;text-transform:lowercase}
+
+  /* ---------- section heads ---------- */
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;
+    background:var(--ink);color:var(--cream);padding:6px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  .section-head{max-width:62ch;margin-bottom:clamp(28px,4vw,44px)}
+  .section-head p{margin-top:14px;color:#2c2733}
+
+  /* ---------- project cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.6vw,28px)}
+  .card{
+    --accent:var(--lime);
+    display:flex;flex-direction:column;gap:14px;
+    background:var(--paper);
+    border:3px solid var(--ink);border-top:10px solid var(--accent);
+    border-radius:22px;padding:22px;
+    box-shadow:8px 8px 0 var(--ink);
+    transition:transform .16s ease, box-shadow .16s ease;
+  }
+  .card:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--ink)}
+  .card--pink{--accent:var(--pink)}
+  .card--orange{--accent:var(--orange)}
+  .card--sky{--accent:var(--sky)}
+  .card-top{display:flex;align-items:flex-start;gap:13px}
+  .card-icon{
+    flex:none;width:52px;height:52px;display:grid;place-items:center;
+    font-size:1.5rem;background:var(--accent);
+    border:2.5px solid var(--ink);border-radius:14px;transform:rotate(-3deg);
+  }
+  .card h3{font-size:1.42rem}
+  .card-tag{font-family:var(--mono);font-size:.71rem;opacity:.7;margin-top:3px}
+  .ver{
+    margin-left:auto;flex:none;font-family:var(--mono);font-size:.66rem;
+    border:1.8px solid var(--ink);border-radius:999px;padding:3px 8px;background:#fff;
+  }
+  .card-copy{font-size:.94rem;color:#2c2733}
+  .specs{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;font-family:var(--mono);font-size:.66rem}
+  .specs li{background:rgba(13,11,18,.06);border-radius:6px;padding:3px 7px}
+  .card-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+  .card-note{
+    font-family:var(--mono);font-size:.68rem;opacity:.72;
+    border-top:1.6px dashed rgba(13,11,18,.25);padding-top:11px;
+  }
+  .card-note::before{content:"honest note: ";font-weight:700;opacity:.9}
+
+  /* ---------- lore ---------- */
+  .lore{background:var(--ink);color:var(--cream);border-block:3px solid var(--ink)}
+  .lore .kicker{background:var(--lime);color:var(--ink)}
+  .lore-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,56px);align-items:start}
+  .lore h2{color:var(--cream)}
+  .lore p{color:#d8d3e0;margin-top:16px}
+  .lore q{quotes:"“" "”";color:var(--lime)}
+  .receipts{
+    background:var(--paper);color:var(--ink);
+    border:3px solid var(--ink);border-radius:20px;padding:22px;
+    box-shadow:10px 10px 0 var(--lime);
+    transform:rotate(.8deg);
+  }
+  .receipts h3{font-size:1rem;font-family:var(--mono);text-transform:lowercase;display:flex;justify-content:space-between;gap:10px;border-bottom:2px dashed rgba(13,11,18,.3);padding-bottom:12px}
+  .receipts ul{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.78rem}
+  .receipts li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1.5px dotted rgba(13,11,18,.2)}
+  .receipts li:last-child{border-bottom:none}
+  .receipts li span:last-child{font-weight:700;white-space:nowrap}
+  .receipts .total{border-top:2.5px solid var(--ink);margin-top:6px;padding-top:12px;font-size:.85rem}
+
+  /* ---------- vibe steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+  .step{
+    border:2.5px solid var(--ink);border-radius:18px;background:var(--paper);
+    padding:18px;box-shadow:5px 5px 0 var(--ink);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .step:nth-child(even){transform:translateY(10px)}
+  .step b{font-family:var(--mono);font-size:1.7rem;line-height:1;opacity:.25}
+  .step h3{font-size:1.02rem}
+  .step p{font-size:.85rem;color:#3a3444}
+
+  /* ---------- footer / hosting ---------- */
+  .host{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+    background:var(--lime);border:3px solid var(--ink);border-radius:24px;
+    padding:clamp(22px,4vw,34px);box-shadow:10px 10px 0 var(--ink);
+  }
+  .host h2{font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .host p{font-family:var(--mono);font-size:.76rem;margin-top:8px}
+  footer{border-top:3px solid var(--ink);margin-top:clamp(56px,8vw,90px);padding-block:34px 46px}
+  .foot-top{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+  .foot-links{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:.78rem}
+  .foot-links a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+  .foot-links a:hover{border-color:var(--ink)}
+  .fineprint{font-family:var(--mono);font-size:.7rem;opacity:.7;margin-top:22px;max-width:70ch}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px){
+    .hero{grid-template-columns:1fr;gap:38px}
+    .hero-photo{max-width:340px;margin-inline:auto;width:100%;order:-1;padding-top:22px}
+    .hero-copy{max-width:60ch}
+    .grid{grid-template-columns:1fr}
+    .lore-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .step:nth-child(even){transform:none}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stats li:nth-child(2){border-right:none}
+    .stats li:nth-child(-n+2){border-bottom:2.5px solid var(--ink)}
+  }
+  @media (max-width: 640px){
+    .wrap,.topbar{width:min(100% - 1.5rem, 1120px)}
+    .topbar{gap:10px;padding:9px 11px;top:8px}
+    .topbar nav{display:none}
+    .gh{font-size:.7rem;padding:7px 11px}
+    .brand{font-size:.94rem}
+    .s1{left:-6px;top:8px;font-size:.6rem}
+    .s2{right:-6px;font-size:.6rem}
+    .s3{display:none}
+    .photo-card{transform:rotate(1.2deg);box-shadow:8px 8px 0 var(--ink)}
+    .hero-photo{padding-inline:6px}
+    .stats{grid-template-columns:1fr 1fr;box-shadow:5px 5px 0 var(--ink)}
+    .stats li{padding:14px 12px}
+    .stats b{font-size:1.4rem}
+    .steps{grid-template-columns:1fr}
+    .card{padding:18px;box-shadow:6px 6px 0 var(--ink)}
+    .card:hover{transform:none;box-shadow:6px 6px 0 var(--ink)}
+    .host{box-shadow:6px 6px 0 var(--ink)}
+    .receipts{transform:none;box-shadow:7px 7px 0 var(--lime)}
+    .hl{box-shadow:3px 3px 0 var(--ink)}
+  }
+  @media (max-width: 380px){
+    .hero-actions .btn{width:100%;justify-content:center}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#projects">skip to the good part</a>
+
+<header class="topbar">
+  <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>nahid<span class="brand-ext">.exe</span></a>
+  <nav aria-label="Main">
+    <a href="#projects">projects</a>
+    <a href="#lore">lore</a>
+    <a href="#vibe">how i vibe</a>
+  </nav>
+  <a class="gh" href="https://github.com/nahidsarker771" target="_blank" rel="noopener">github ↗</a>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot-live" aria-hidden="true"></span> currently: shipping stuff + pretending to study</p>
+      <h1>i build apps<br><span class="hl hl-lime">by vibing</span><br>and somehow <span class="hl hl-pink">it works</span></h1>
+      <p class="lede">student by day, prompt-wrangler by night. four free apps, zero servers, one very patient AI. no ads, no signup, no “contact sales” — just stuff that actually runs.</p>
+      <div class="hero-actions">
+        <a class="btn btn-ink" href="#projects">meet the projects <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-lime" href="https://github.com/nahidsarker771/kana-pet/releases/latest/download/KanaPet.apk">grab KanaPet.apk <span aria-hidden="true">⤓</span></a>
+      </div>
+      <ul class="hero-tags">
+        <li>free forever</li>
+        <li>offline-first</li>
+        <li>open source</li>
+      </ul>
+    </div>
+
+    <div class="hero-photo">
+      <span class="tape" aria-hidden="true"></span>
+      <figure class="photo-card" id="photoCard">
+        <img src="assets/nahid.jpg" width="678" height="900" alt="Nahid standing on a campus lawn in front of a brick university building, arms crossed." fetchpriority="high">
+        <figcaption>
+          <span id="caption">certified human, allegedly</span>
+          <button class="tap" id="tapBtn" type="button" aria-pressed="false">tap me</button>
+        </figcaption>
+      </figure>
+      <span class="sticker s1">100% vibe-coded</span>
+      <span class="sticker s2">no ads ever</span>
+      <span class="sticker s3">ships at 2am</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>vibe coding</span><span>✦</span><span>freebuff</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
+      </div>
+      <div class="marquee-group">
+        <span>vibe coding</span><span>✦</span><span>freebuff</span><span>✦</span><span>vanilla js</span><span>✦</span><span>capacitor 6</span><span>✦</span><span>offline-first</span><span>✦</span><span>no trackers</span><span>✦</span><span>en + বাংলা</span><span>✦</span><span>github pages</span><span>✦</span><span>zero meetings</span><span>✦</span>
+      </div>
+    </div>
+  </div>
+
+  <ul class="stats wrap" aria-label="Numbers that sound impressive">
+    <li><b>4</b><span>apps shipped</span></li>
+    <li><b>0</b><span>servers to babysit</span></li>
+    <li><b>0</b><span>trackers or ads</span></li>
+    <li><b>∞</b><span>vibes per commit</span></li>
+  </ul>
+
+  <section id="projects" class="wrap">
+    <div class="section-head">
+      <span class="kicker">the lineup</span>
+      <h2>four apps, zero paywalls</h2>
+      <p>pick one, they’re all free. the download buttons go straight to GitHub Releases — no store account, no “install our launcher”, no 30-second ad for a game you’ll never play.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="card-top">
+          <div class="card-icon" aria-hidden="true">🐣</div>
+          <div>
+            <h3>KanaPet</h3>
+            <p class="card-tag">learn japanese kana with a pet</p>
+          </div>
+          <span class="ver">v1.27</span>
+        </div>
+        <p class="card-copy">1,022 cards, four offline voice actors and a little guy named Mochi who gets visibly disappointed when you skip reviews. emotionally manipulative. works.</p>
+        <ul class="specs">
+          <li>49.9 MB</li><li>PWA + APK</li><li>android 11+</li><li>en + বাংলা</li>
+        </ul>
+        <div class="card-links">
+          <a class="btn btn-ink btn-sm" href="https://github.com/nahidsarker771/kana-pet/releases/latest/download/KanaPet.apk">APK ⤓</a>
+          <a class="btn btn-sm" href="https://nahidsarker771.github.io/kana-pet/app.html" target="_blank" rel="noopener">play in browser ↗</a>
+          <a class="btn btn-sm" href="https://github.com/nahidsarker771/kana-pet" target="_blank" rel="noopener">github ↗</a>
+        </div>
+        <p class="card-note">not responsible for you learning kana instead of sleeping.</p>
+      </article>
+
+      <article class="card card--pink reveal">
+        <div class="card-top">
+          <div class="card-icon" aria-hidden="true">🧠</div>
+          <div>
+            <h3>RecallFlow</h3>
+            <p class="card-tag">study less, remember more</p>
+          </div>
+          <span class="ver">v2.5</span>
+        </div>
+        <p class="card-copy">spaced repetition that lives entirely on your phone. it literally has no internet permission — so even if it wanted to snitch on your study habits, it can’t.</p>
+        <ul class="specs">
+          <li>13.7 MB</li><li>android 8+</li><li>fully offline</li><li>no permissions</li>
+        </ul>
+        <div class="card-links">
+          <a class="btn btn-ink btn-sm" href="https://github.com/nahidsarker771/recall-flow/releases/latest/download/RecallFlow.apk">APK ⤓</a>
+          <a class="btn btn-sm" href="https://nahidsarker771.github.io/recall-flow/" target="_blank" rel="noopener">live page ↗</a>
+          <a class="btn btn-sm" href="https://github.com/nahidsarker771/recall-flow" target="_blank" rel="noopener">github ↗</a>
+        </div>
+        <p class="card-note">the app remembers for you. your brain is now officially a backup drive.</p>
+      </article>
+
+      <article class="card card--orange reveal">
+        <div class="card-top">
+          <div class="card-icon" aria-hidden="true">📥</div>
+          <div>
+            <h3>Download Chan</h3>
+            <p class="card-tag">paste. tap. done.</p>
+          </div>
+          <span class="ver">v2.1.1</span>
+        </div>
+        <p class="card-copy">109 MB of yt-dlp + ffmpeg crammed into your pocket. no server, no sketchy redirects, and definitely no “download” button that turns out to be an ad for a VPN.</p>
+        <ul class="specs">
+          <li>109 MB</li><li>android 11+</li><li>multi-thread</li><li>no server</li>
+        </ul>
+        <div class="card-links">
+          <a class="btn btn-ink btn-sm" href="https://github.com/nahidsarker771/download-chan/releases/latest/download/Download-Chan.apk">APK ⤓</a>
+          <a class="btn btn-sm" href="https://nahidsarker771.github.io/download-chan/" target="_blank" rel="noopener">live page ↗</a>
+          <a class="btn btn-sm" href="https://github.com/nahidsarker771/download-chan" target="_blank" rel="noopener">github ↗</a>
+        </div>
+        <p class="card-note">please only download things you’re allowed to download. i’m a coder, not your lawyer.</p>
+      </article>
+
+      <article class="card card--sky reveal">
+        <div class="card-top">
+          <div class="card-icon" aria-hidden="true">🎮</div>
+          <div>
+            <h3>Life Quest</h3>
+            <p class="card-tag">your day, but it’s a game</p>
+          </div>
+          <span class="ver">v1.1</span>
+        </div>
+        <p class="card-copy">chores become quests, coins become BDT, and 15 themes exist because one personality was clearly not enough. 682 KB and it still looks better than half the apps on your phone.</p>
+        <ul class="specs">
+          <li>682 KB</li><li>android 9+</li><li>15 themes</li><li>offline</li>
+        </ul>
+        <div class="card-links">
+          <a class="btn btn-ink btn-sm" href="https://github.com/nahidsarker771/life-quest/releases/latest/download/LifeQuest.apk">APK ⤓</a>
+          <a class="btn btn-sm" href="https://nahidsarker771.github.io/life-quest/app.html" target="_blank" rel="noopener">play in browser ↗</a>
+          <a class="btn btn-sm" href="https://github.com/nahidsarker771/life-quest" target="_blank" rel="noopener">github ↗</a>
+        </div>
+        <p class="card-note">gamifying your life is healthy. gamifying your sleep schedule is not. i do both.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="lore" class="lore">
+    <div class="wrap lore-grid">
+      <div>
+        <span class="kicker">the lore, abridged</span>
+        <h2>i am not a startup.<br>i’m a guy with wifi.</h2>
+        <p>it starts at 2am with a normal idea. then i describe it badly to <q>Freebuff</q>, it says “sure, why not”, and eight hours later something installs on your phone.</p>
+        <p>no framework, no meetings, no roadmap, no investors. just vanilla JavaScript, a healthy relationship with the browser console, and the belief that free software should feel nice to use.</p>
+        <p>every app here is free, has no ads, no accounts and no analytics. i can’t even see you reading this page. that’s the whole business model.</p>
+      </div>
+      <aside class="receipts" aria-label="The fine print">
+        <h3>the fine print <span>✓ paid: nothing</span></h3>
+        <ul>
+          <li><span>ads served</span><span>0</span></li>
+          <li><span>accounts to create</span><span>0</span></li>
+          <li><span>data collected</span><span>0 bytes</span></li>
+          <li><span>api keys in repos</span><span>0</span></li>
+          <li><span>servers running</span><span>0</span></li>
+          <li><span>frameworks used</span><span>0</span></li>
+          <li class="total"><span>apps you can just have</span><span>4 / 4</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="vibe" class="wrap">
+    <div class="section-head">
+      <span class="kicker">the process</span>
+      <h2>how i vibe (patent pending)</h2>
+      <p>people ask how the apps get made. they assume a team. it’s one person, one AI, and a suspicious amount of orange juice.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <b>01</b>
+        <h3>have a normal idea at 2am</h3>
+        <p>“what if studying japanese felt like feeding a pet?” sounds normal at 2am. it is not.</p>
+      </li>
+      <li class="step reveal">
+        <b>02</b>
+        <h3>explain it badly to freebuff</h3>
+        <p>half sentence, three typos, one reference to a meme. somehow it understands.</p>
+      </li>
+      <li class="step reveal">
+        <b>03</b>
+        <h3>fix 47 errors, call them features</h3>
+        <p>the bug becomes a “design decision”. the crash becomes “aggressive battery saving”.</p>
+      </li>
+      <li class="step reveal">
+        <b>04</b>
+        <h3>ship it free, go to sleep</h3>
+        <p>github pages, direct APK, no store review queue. repeat until the folder is full of apps.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap" style="padding-top:0">
+    <div class="host">
+      <div>
+        <h2>this whole site is one html file and one jpg.</h2>
+        <p>no build step · no database · no monthly bill · hosted free on github pages</p>
+      </div>
+      <a class="btn btn-ink" href="https://github.com/nahidsarker771" target="_blank" rel="noopener">steal the idea ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="foot-top">
+    <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>nahid<span class="brand-ext">.exe</span></a>
+    <div class="foot-links">
+      <a href="https://github.com/nahidsarker771" target="_blank" rel="noopener">github</a>
+      <a href="https://nahidsarker771.github.io/kana-pet/" target="_blank" rel="noopener">kana-pet</a>
+      <a href="https://nahidsarker771.github.io/recall-flow/" target="_blank" rel="noopener">recall-flow</a>
+      <a href="https://nahidsarker771.github.io/download-chan/" target="_blank" rel="noopener">download-chan</a>
+      <a href="https://nahidsarker771.github.io/life-quest/" target="_blank" rel="noopener">life-quest</a>
+    </div>
+  </div>
+  <p class="fineprint">© <span id="yr">2026</span> Nahid. vibe-coded with Freebuff, vanilla CSS and an amount of caffeine i won’t disclose. everything here is free — if you paid for it, you got scammed.</p>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // photo easter egg
+  var card = document.getElementById('photoCard');
+  var caption = document.getElementById('caption');
+  var tapBtn = document.getElementById('tapBtn');
+  var mottos = [
+    'certified human, allegedly',
+    'that’s me. no filter. ok, maybe a filter.',
+    'campus photo, 4pm, definitely not skipping class',
+    'the face behind 47 unclosed tabs'
+  ];
+  var i = 0;
+  function wink() {
+    i = (i + 1) % mottos.length;
+    caption.textContent = mottos[i];
+    card.classList.toggle('wink', i % 2 === 1);
+    tapBtn.setAttribute('aria-pressed', i % 2 === 1 ? 'true' : 'false');
+  }
+  tapBtn.addEventListener('click', wink);
+  card.addEventListener('click', function (e) {
+    if (e.target !== tapBtn) wink();
+  });
+
+  // scroll reveal
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
